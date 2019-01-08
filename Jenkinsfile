@@ -6,6 +6,8 @@ pipeline{
         args '-v /tmp:/tmp'
      }
   }
+
+node{  
   stages {
     stage('Notify') {
        steps {
@@ -14,6 +16,7 @@ pipeline{
       }
       
   }
+}
 }
     
              

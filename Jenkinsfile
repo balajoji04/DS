@@ -2,12 +2,11 @@ pipeline{
    agent {
      dockerfile{
         filename 'Dockerfile'
-        label "docker-nodes"
+        label "Slave"
         args '-v /tmp:/tmp'
      }
   }
-
-node{  
+  
   stages {
     stage('Notify') {
        steps {
@@ -17,7 +16,7 @@ node{
       
   }
 }
-}
+
     
              
            
